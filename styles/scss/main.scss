@@ -10,6 +10,8 @@ $dark-yellow: #CCB400;
 $dark-orange: #CC6C0C;
 $dark-purple: #6F0CCC;
 
+$container-border-radius: 20px;
+
 
 body {
 	display: flex;
@@ -18,4 +20,9 @@ body {
 	align-items: center;
 	min-height: 100vh;
 	background-color: $black;
+}
+.text {
+	font-family: monospace;
+	line-height: 20px;
+	color: #ffffff;
 }

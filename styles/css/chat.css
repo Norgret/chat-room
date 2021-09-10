@@ -12,35 +12,56 @@ body {
   background-color: #000000;
 }
 
+.text {
+  font-family: monospace;
+  line-height: 20px;
+  color: #ffffff;
+}
+
 #chat-container {
+  display: flex;
+  flex-direction: row;
   width: 80vw;
   height: 80vh;
   background-color: #100020;
+  border-radius: 20px;
 }
 
 #chat-entry {
   width: 33%;
   height: 100%;
+  border-right: 3px solid #FF870F;
 }
-#chat-entry .color-box {
-  width: 100%;
-  height: 100px;
+
+#chat-display {
+  display: flex;
+  flex-direction: column;
+  width: 67%;
+  height: 100%;
+  overflow-y: scroll;
 }
-#chat-entry :nth-child(1) {
-  background-color: #FFE100;
+#chat-display .message {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20px;
 }
-#chat-entry :nth-child(3) {
-  background-color: #FF870F;
+#chat-display .message .sender-icon {
+  min-width: 70px;
+  height: 70px;
+  margin-right: 20px;
+  background-color: #201628;
 }
-#chat-entry :nth-child(5) {
-  background-color: #8B0FFF;
+#chat-display .message .message-body .sender-username {
+  color: #FF870F;
 }
-#chat-entry :nth-child(2) {
-  background-color: #CCB400;
+#chat-display .message:nth-child(odd) .message-body {
+  background-color: #161224;
 }
-#chat-entry :nth-child(4) {
-  background-color: #CC6C0C;
-}
-#chat-entry :nth-child(6) {
-  background-color: #6F0CCC;
+
+@media (max-width: 600px) {
+  #chat-container {
+    display: flex;
+    flex-direction: column;
+  }
 }
