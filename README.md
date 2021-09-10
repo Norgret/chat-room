@@ -22,3 +22,7 @@ Orange:
 Purple:
 #8B0FFF
 #6F0CCC
+
+Darks:
+#000000
+#080018
