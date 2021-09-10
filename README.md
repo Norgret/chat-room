@@ -4,8 +4,10 @@ Noah
 	Chat room, chat landing page
 
 Dallin
-	Login 
+	Login form, login modal
 
+Parker
+	Landing page, dropdown menu
 
 
 

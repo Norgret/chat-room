@@ -1,3 +1,21 @@
 @use '_global.scss';
-@use 'login-modal.scss';
 
+$black: #000000;
+$spacegray: #100020;
+
+$yellow: #FFE100;
+$orange: #FF870F;
+$purple: #8B0FFF;
+$dark-yellow: #CCB400;
+$dark-orange: #CC6C0C;
+$dark-purple: #6F0CCC;
+
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: $black;
+}
