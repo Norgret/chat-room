@@ -45,7 +45,7 @@ $chat-user-icon-size: 70px;
 #chat-submit {
 	@extend %chat-entry-tool;
 	height: 50px;
-	border: 4px solid $dark-orange;
+	border: 4px solid $dark-purple;
 }
 
 #chat-display {
@@ -64,7 +64,7 @@ $chat-user-icon-size: 70px;
 			min-width: $chat-user-icon-size;
 			height: $chat-user-icon-size;
 			margin-right: 20px;
-			background-color: #201628;
+			background-color: $dark-spacegray;
 		}
 
 		.message-body {
