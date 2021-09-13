@@ -1,6 +1,7 @@
 @import 'main.scss';
 
-$chat-message-margin: 20px;
+$default-margin: 30px;
+$chat-form-margin: 10px;
 $chat-user-icon-size: 70px;
 
 
@@ -23,10 +24,30 @@ $chat-user-icon-size: 70px;
 }
 
 #chat-entry {
+	@include flex-column;
+	justify-content: flex-end;
 	width: 33%;
 	height: 100%;
-	border-right: 3px solid $orange;
+	border-right: 3px solid $black;
+}
+#chat-form {
 
+}
+%chat-entry-tool {
+	margin: $chat-form-margin;
+	width: 100%;
+	background-color: $spacegray;
+}
+#text-entry-box {
+	@extend %chat-entry-tool;
+	height: 200px;
+	border: 2px solid $dark-purple;
+}
+#chat-submit {
+	@extend %chat-entry-tool;
+	height: 50px;
+	border: 2px solid $dark-orange;
+	
 }
 
 #chat-display {
@@ -39,7 +60,7 @@ $chat-user-icon-size: 70px;
 	.message {
 		@include flex-row;
 		align-items: center;
-		margin: $chat-message-margin;
+		margin: $default-margin;
 
 		.sender-icon {
 			min-width: $chat-user-icon-size;
@@ -49,9 +70,23 @@ $chat-user-icon-size: 70px;
 		}
 
 		.message-body {
-			.sender-username {
-				color: $orange;
+
+			.message-header {
+				@include flex-row;
+				justify-content: space-between;
+				.sender-info {
+					.sender-username {
+						color: $orange;
+					}
+					.timestamp {
+						color: $dark-orange;
+					}
+				}
+				.options {
+
+				}
 			}
+
 		}
 	}
 	.message:nth-child(odd) .message-body {
