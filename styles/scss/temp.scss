@@ -1,0 +1,78 @@
+@import "global";
+@import "main";
+
+
+.link{
+    color:$homeCol4;
+}
+#home{
+    background-color: $navCol1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.flex-a-lot{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.toggle-color{
+    width: 17px;
+    height: 17px;
+
+}
+.fas{
+
+    color:$homeCol2;
+    width: 17px;
+    height: 17px;
+
+    border: 1px solid $homeCol1;
+    text-align: center;
+    background-color: $homeCol1;
+    border-radius: 20px;
+}
+.background{
+    background-color: $homeCol5;
+    height: auto;
+    width: fit-content;
+}
+
+.toggle-visi{
+    display: flex;
+    flex-direction: column;
+}
+.hidden{
+    visibility: hidden;
+}
+
+.tansformers{
+    width: fit-content;
+    transform: rotate(90deg);
+
+}
+.title{
+    color: $orange;
+}
+.logo-area{
+    height: 50Vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $homeCol1;
+    width: 50%;
+}
+.sub-title{
+    font-size: 2vw;
+}
+.logo{
+    font-size: 3vw;
+}
+.area{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
