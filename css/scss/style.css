@@ -1,0 +1,223 @@
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .dropdown {
+    color: #dadfea;
+    border: 1px solid #101010;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    background-color: #101010;
+    border-radius: 10px;
+    padding-left: 5px;
+  }
+  
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  * {
+    font-family: monospace;
+  }
+  
+  @keyframes starfall1 {
+    0% {
+      right: -50px;
+      top: -50px;
+      transform: rotate(360deg);
+    }
+    100% {
+      right: 1000px;
+      top: 1000px;
+    }
+  }
+  @keyframes starfall2 {
+    0% {
+      right: 100px;
+      top: -50px;
+      transform: rotate(360deg);
+    }
+    100% {
+      right: 1000px;
+      top: 500px;
+    }
+  }
+  @keyframes starfall3 {
+    0% {
+      right: 100px;
+      top: -50px;
+      transform: rotate(360deg);
+    }
+    100% {
+      right: 500px;
+      top: 500px;
+    }
+  }
+  @keyframes starfall4 {
+    0% {
+      left: 200px;
+      top: -50px;
+      transform: rotate(360deg);
+    }
+    100% {
+      left: -1000px;
+      top: 750px;
+    }
+  }
+  @keyframes starfall5 {
+    0% {
+      right: -50px;
+      top: 75px;
+      transform: rotate(360deg);
+    }
+    100% {
+      right: 200px;
+      top: 500px;
+    }
+  }
+  .link {
+    color: #e3d724;
+  }
+  
+  #home {
+    background-color: #101010;
+  }
+  
+  .flex-a-lot {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .toggle-color {
+    width: 17px;
+    height: 17px;
+  }
+  
+  .fas {
+    color: #ffe100;
+    width: 17px;
+    height: 17px;
+    border: 1px solid #1500cc;
+    text-align: center;
+    background-color: #1500cc;
+    border-radius: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .background {
+    background-color: #7e29ff;
+    height: auto;
+    width: fit-content;
+  }
+  
+  .toggle-visi {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .hidden {
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .tansformers {
+    width: fit-content;
+    transform: rotate(90deg);
+  }
+  
+  .title {
+    color: #FF870F;
+  }
+  
+  .logo-area {
+    height: 50Vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1500cc;
+    width: 50%;
+    z-index: -2;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .sub-title {
+    font-size: 2vw;
+  }
+  
+  .logo {
+    font-size: 3vw;
+  }
+  
+  .area {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .image1 {
+    width: 50px;
+    height: 50px;
+    top: -50px;
+    right: -50px;
+    position: absolute;
+    z-index: -1;
+    animation: starfall1 5s linear infinite normal;
+    filter: blur(4px);
+  }
+  
+  .image2 {
+    width: 50px;
+    height: 50px;
+    top: -50px;
+    right: -50px;
+    position: absolute;
+    z-index: -1;
+    animation: starfall2 3s linear infinite normal;
+    filter: blur(4px);
+  }
+  
+  .image3 {
+    width: 50px;
+    height: 50px;
+    top: -50px;
+    right: -50px;
+    position: absolute;
+    z-index: -1;
+    animation: starfall3 3s linear 1s infinite normal;
+    filter: blur(4px);
+  }
+  
+  .image4 {
+    width: 50px;
+    height: 50px;
+    top: -50px;
+    right: -50px;
+    position: absolute;
+    z-index: -1;
+    animation: starfall4 6s linear infinite normal;
+    filter: blur(4px);
+  }
+  
+  .image5 {
+    width: 50px;
+    height: 50px;
+    top: -50px;
+    right: -50px;
+    position: absolute;
+    z-index: -1;
+    animation: starfall5 3s linear 2s infinite normal;
+    filter: blur(4px);
+  }
+  

@@ -1,0 +1,212 @@
+$black: #000000;
+$bluegrey: #080018;
+$grey: #0a0718;
+$purple1: #8B0FFF;
+$purple2: #6F0CCC;
+
+body
+{
+    background-color: $black;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: monospace;
+}
+
+.container
+{
+    background-color: $bluegrey;
+    width: 95vw;
+    height: 95vh;
+    border-radius: 20px;
+    animation: phase 5s linear infinite;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: opencontainer 1.5s ease-in-out;
+}
+
+@keyframes phase
+{
+    0% {background-color: $bluegrey;}
+    100% {background-color: $bluegrey;}
+}
+
+@keyframes openmodal
+{
+    0% {width: 0vw}
+    100% {width: 50vw}
+}
+@keyframes opencontainer
+{
+    0% {width: 0vw; height: 80vh}
+    50% {height: 95vh}
+    100% {width: 95vw}
+}
+@keyframes openinput
+{
+    0% {height: 0vh; border: transparent 0px solid}
+    100% {height: 7.5vh; border: $purple1 4px solid}
+}
+
+.box
+{
+    width: 0;
+    padding: 6.8%;
+    position: absolute;
+    left: 5vw;
+    background-color: rgba($color: #ffffff, $alpha: 0.02);
+}
+
+@keyframes boxanim 
+{
+    0% {left: -20vw; transform: rotate(0deg);}
+    100%{left: 105vw; transform: rotate(720deg);}
+}
+.anim :nth-child(1)
+{
+    top: 2.5%;
+    left: -20vw;
+    animation: boxanim 20s linear infinite;
+}
+
+.anim :nth-child(2)
+{
+    top: 28%;
+    left: -20vw;
+    animation: boxanim 20s linear 2.5s infinite;
+}
+
+.anim :nth-child(3)
+{
+    top: 50.5%;
+    left: -20vw;
+    animation: boxanim 20s linear 5s infinite;
+}
+
+.anim :nth-child(4)
+{
+    top: 75%;
+    left: -20vw;
+    animation: boxanim 20s linear 7.5s infinite;
+}
+
+.modal
+{
+    width: 0vw;
+    height: 75vh;
+    z-index: 5;
+    background-color: rgba($color: #150D24, $alpha: .75);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+
+    overflow: hidden;
+    animation: openmodal 1s ease-in-out .5s forwards;
+    h1
+    {
+        font-size: 3.5vw;
+        white-space: nowrap;
+        text-align: center;
+    }
+    div
+    {
+        display: flex;
+        flex-direction: column;
+
+        input
+        {
+            margin-bottom: 15px;
+            margin-top: 5px;
+            height: 0vh;
+            width: 35vw;
+            border: transparent 0px solid;
+            background-color: transparent;
+            color: white;
+            font-family: monospace;
+            border-radius: 5px;
+            font-size: 2vw;
+            text-align: center;
+
+            animation: openinput .65s ease-in .75s forwards;
+        }
+    }
+    button
+    {
+        padding: 10px 50px;
+        border-radius: 50vh;
+        border: $purple1 solid 5px;
+        background-color: transparent;  
+        color: white;
+        font-family: monospace;
+        font-size: 3vh;
+        white-space: nowrap;
+        transition: all .35s;
+    }
+    button:hover
+    {
+        border-color: $purple2;
+        color: darkgrey;
+    }
+}
+
+.sidebar
+{
+    background-color: $grey;
+    position: absolute;
+    width: 1.5vw;
+    height: 100vh;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    left: 0;
+}
+
+.sidecontent
+{
+    transition: all 1s;
+    background-color: $grey;
+    position: absolute;
+    width: 0vw;
+    height: 99vh;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    left: -5vw;
+    z-index: 5;
+    border: .5vh $grey dashed;
+    overflow: none;
+    border-left: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    a
+    {
+        text-decoration: none;
+        display: inline;
+        font-size: 1.75vw;
+        padding: 35px 0px;
+        color: white;
+        transition: all .5s;
+    }
+
+    a:hover
+    {
+        color: $purple2;
+    }
+}
+
+.sidebar:hover .sidecontent
+{
+    border: .5vh $purple1 solid;
+    border-left: none;
+    width: 15vw;
+    left: 0vw;
+}
