@@ -2,6 +2,7 @@ $black: #000000;
 $bluegrey: #080018;
 $grey: #0a0718;
 $purple1: #8B0FFF;
+$purple2: #6F0CCC;
 
 body
 {
@@ -28,12 +29,30 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: opencontainer 1.5s ease-in-out;
 }
 
 @keyframes phase
 {
     0% {background-color: $bluegrey;}
     100% {background-color: $bluegrey;}
+}
+
+@keyframes openmodal
+{
+    0% {width: 0vw}
+    100% {width: 50vw}
+}
+@keyframes opencontainer
+{
+    0% {width: 0vw; height: 80vh}
+    50% {height: 95vh}
+    100% {width: 95vw}
+}
+@keyframes openinput
+{
+    0% {height: 0vh; border: transparent 0px solid}
+    100% {height: 7.5vh; border: $purple1 4px solid}
 }
 
 .box
@@ -80,20 +99,23 @@ body
 
 .modal
 {
-    width: 50vw;
+    width: 0vw;
     height: 75vh;
     z-index: 5;
     background-color: rgba($color: #150D24, $alpha: .75);
     border-radius: 20px;
-
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
 
+    overflow: hidden;
+    animation: openmodal 1s ease-in-out .5s forwards;
     h1
     {
         font-size: 3.5vw;
+        white-space: nowrap;
+        text-align: center;
     }
     div
     {
@@ -104,15 +126,17 @@ body
         {
             margin-bottom: 15px;
             margin-top: 5px;
-            height: 7.5vh;
+            height: 0vh;
             width: 35vw;
-            border: $purple1 4px solid;
+            border: transparent 0px solid;
             background-color: transparent;
             color: white;
             font-family: monospace;
             border-radius: 5px;
             font-size: 2vw;
             text-align: center;
+
+            animation: openinput .65s ease-in .75s forwards;
         }
     }
     button
@@ -124,5 +148,65 @@ body
         color: white;
         font-family: monospace;
         font-size: 3vh;
+        white-space: nowrap;
+        transition: all .35s;
     }
+    button:hover
+    {
+        border-color: $purple2;
+        color: darkgrey;
+    }
+}
+
+.sidebar
+{
+    background-color: $grey;
+    position: absolute;
+    width: 1.5vw;
+    height: 100vh;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    left: 0;
+}
+
+.sidecontent
+{
+    transition: all 1s;
+    background-color: $grey;
+    position: absolute;
+    width: 0vw;
+    height: 99vh;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    left: -5vw;
+    z-index: 5;
+    border: .5vh $grey dashed;
+    overflow: none;
+    border-left: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    a
+    {
+        text-decoration: none;
+        display: inline;
+        font-size: 1.75vw;
+        padding: 35px 0px;
+        color: white;
+        transition: all .5s;
+    }
+
+    a:hover
+    {
+        color: $purple2;
+    }
+}
+
+.sidebar:hover .sidecontent
+{
+    border: .5vh $purple1 solid;
+    border-left: none;
+    width: 15vw;
+    left: 0vw;
 }
