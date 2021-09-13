@@ -93,7 +93,7 @@ body
 
     h1
     {
-        font-size: 5.5vh;
+        font-size: 3.5vw;
     }
     div
     {
@@ -104,18 +104,25 @@ body
         {
             margin-bottom: 15px;
             margin-top: 5px;
-            padding: 3vh 10vw;
+            height: 7.5vh;
+            width: 35vw;
             border: $purple1 4px solid;
             background-color: transparent;
             color: white;
+            font-family: monospace;
+            border-radius: 5px;
+            font-size: 2vw;
+            text-align: center;
         }
     }
     button
     {
-        padding: 20px 75px;
+        padding: 10px 50px;
         border-radius: 50vh;
         border: $purple1 solid 5px;
-        background-color: transparent;
+        background-color: transparent;  
         color: white;
+        font-family: monospace;
+        font-size: 3vh;
     }
 }

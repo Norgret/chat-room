@@ -85,7 +85,7 @@ body {
   flex-direction: column;
 }
 .modal h1 {
-  font-size: 5.5vh;
+  font-size: 3.5vw;
 }
 .modal div {
   display: flex;
@@ -94,17 +94,24 @@ body {
 .modal div input {
   margin-bottom: 15px;
   margin-top: 5px;
-  padding: 3vh 10vw;
+  height: 7.5vh;
+  width: 35vw;
   border: #8B0FFF 4px solid;
   background-color: transparent;
   color: white;
+  font-family: monospace;
+  border-radius: 5px;
+  font-size: 2vw;
+  text-align: center;
 }
 .modal button {
-  padding: 20px 75px;
+  padding: 10px 50px;
   border-radius: 50vh;
   border: #8B0FFF solid 5px;
   background-color: transparent;
   color: white;
+  font-family: monospace;
+  font-size: 3vh;
 }
 
 /*# sourceMappingURL=login.css.map */
