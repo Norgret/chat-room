@@ -72,6 +72,7 @@ body {
 #chat-submit {
   height: 50px;
   border: 4px solid #6F0CCC;
+  border: 4px solid #CC6C0C;
 }
 
 #chat-display {
@@ -92,6 +93,7 @@ body {
   height: 70px;
   margin-right: 20px;
   background-color: #060511;
+  background-color: #201628;
 }
 #chat-display .message .message-body .message-header {
   display: flex;

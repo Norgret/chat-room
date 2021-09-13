@@ -1,14 +1,27 @@
+<<<<<<< HEAD
+=======
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+>>>>>>> home2
 body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+<<<<<<< HEAD
   background-color: #060511;
+=======
+  background-color: #000000;
+>>>>>>> home2
 }
 
 .text {
   font-family: monospace;
+<<<<<<< HEAD
   font-size: 1.2em;
   line-height: 20px;
   color: #ffffff;
@@ -18,3 +31,9 @@ body {
   margin: 0px;
   padding: 0px;
 }
+=======
+  font-size: 1em;
+  line-height: 20px;
+  color: #ffffff;
+}
+>>>>>>> home2
