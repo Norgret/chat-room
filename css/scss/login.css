@@ -1,3 +1,117 @@
+body {
+  background-color: #000000;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: monospace;
+}
 
+.container {
+  background-color: #080018;
+  width: 95vw;
+  height: 95vh;
+  border-radius: 20px;
+  animation: phase 5s linear infinite;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes phase {
+  0% {
+    background-color: #080018;
+  }
+  100% {
+    background-color: #080018;
+  }
+}
+.box {
+  width: 0;
+  padding: 6.8%;
+  position: absolute;
+  left: 5vw;
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+@keyframes boxanim {
+  0% {
+    left: -20vw;
+    transform: rotate(0deg);
+  }
+  100% {
+    left: 105vw;
+    transform: rotate(720deg);
+  }
+}
+.anim :nth-child(1) {
+  top: 2.5%;
+  left: -20vw;
+  animation: boxanim 20s linear infinite;
+}
+
+.anim :nth-child(2) {
+  top: 28%;
+  left: -20vw;
+  animation: boxanim 20s linear 2.5s infinite;
+}
+
+.anim :nth-child(3) {
+  top: 50.5%;
+  left: -20vw;
+  animation: boxanim 20s linear 5s infinite;
+}
+
+.anim :nth-child(4) {
+  top: 75%;
+  left: -20vw;
+  animation: boxanim 20s linear 7.5s infinite;
+}
+
+.modal {
+  width: 50vw;
+  height: 75vh;
+  z-index: 5;
+  background-color: rgba(21, 13, 36, 0.75);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.modal h1 {
+  font-size: 3.5vw;
+}
+.modal div {
+  display: flex;
+  flex-direction: column;
+}
+.modal div input {
+  margin-bottom: 15px;
+  margin-top: 5px;
+  height: 7.5vh;
+  width: 35vw;
+  border: #8B0FFF 4px solid;
+  background-color: transparent;
+  color: white;
+  font-family: monospace;
+  border-radius: 5px;
+  font-size: 2vw;
+  text-align: center;
+}
+.modal button {
+  padding: 10px 50px;
+  border-radius: 50vh;
+  border: #8B0FFF solid 5px;
+  background-color: transparent;
+  color: white;
+  font-family: monospace;
+  font-size: 3vh;
+}
 
 /*# sourceMappingURL=login.css.map */
