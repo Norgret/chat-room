@@ -21,6 +21,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: opencontainer 1.5s ease-in-out;
 }
 
 @keyframes phase {
@@ -29,6 +30,36 @@ body {
   }
   100% {
     background-color: #080018;
+  }
+}
+@keyframes openmodal {
+  0% {
+    width: 0vw;
+  }
+  100% {
+    width: 50vw;
+  }
+}
+@keyframes opencontainer {
+  0% {
+    width: 0vw;
+    height: 80vh;
+  }
+  50% {
+    height: 95vh;
+  }
+  100% {
+    width: 95vw;
+  }
+}
+@keyframes openinput {
+  0% {
+    height: 0vh;
+    border: transparent 0px solid;
+  }
+  100% {
+    height: 7.5vh;
+    border: #8B0FFF 4px solid;
   }
 }
 .box {
@@ -74,7 +105,7 @@ body {
 }
 
 .modal {
-  width: 50vw;
+  width: 0vw;
   height: 75vh;
   z-index: 5;
   background-color: rgba(21, 13, 36, 0.75);
@@ -83,9 +114,13 @@ body {
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
+  overflow: hidden;
+  animation: openmodal 1s ease-in-out 0.5s forwards;
 }
 .modal h1 {
   font-size: 3.5vw;
+  white-space: nowrap;
+  text-align: center;
 }
 .modal div {
   display: flex;
@@ -94,15 +129,16 @@ body {
 .modal div input {
   margin-bottom: 15px;
   margin-top: 5px;
-  height: 7.5vh;
+  height: 0vh;
   width: 35vw;
-  border: #8B0FFF 4px solid;
+  border: transparent 0px solid;
   background-color: transparent;
   color: white;
   font-family: monospace;
   border-radius: 5px;
   font-size: 2vw;
   text-align: center;
+  animation: openinput 0.65s ease-in 0.75s forwards;
 }
 .modal button {
   padding: 10px 50px;
@@ -112,6 +148,59 @@ body {
   color: white;
   font-family: monospace;
   font-size: 3vh;
+  white-space: nowrap;
+  transition: all 0.35s;
+}
+.modal button:hover {
+  border-color: #6F0CCC;
+  color: darkgrey;
+}
+
+.sidebar {
+  background-color: #0a0718;
+  position: absolute;
+  width: 1.5vw;
+  height: 100vh;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  left: 0;
+}
+
+.sidecontent {
+  transition: all 1s;
+  background-color: #0a0718;
+  position: absolute;
+  width: 0vw;
+  height: 99vh;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  left: -5vw;
+  z-index: 5;
+  border: 0.5vh #0a0718 dashed;
+  overflow: none;
+  border-left: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.sidecontent a {
+  text-decoration: none;
+  display: inline;
+  font-size: 1.75vw;
+  padding: 35px 0px;
+  color: white;
+  transition: all 0.5s;
+}
+.sidecontent a:hover {
+  color: #6F0CCC;
+}
+
+.sidebar:hover .sidecontent {
+  border: 0.5vh #8B0FFF solid;
+  border-left: none;
+  width: 15vw;
+  left: 0vw;
 }
 
 /*# sourceMappingURL=login.css.map */
